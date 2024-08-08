@@ -1,0 +1,9 @@
+services:
+  suite-portal:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      PORT: 7420
+    ports:
+      - 7420:7420
