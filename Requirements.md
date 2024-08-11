@@ -38,12 +38,14 @@ export interface MaintenanceRequest {
 7. Add a new API endpoint for Admin's to `PUT /api/maintenance-requests/:id/close` to close a specified issue with an `id`
 
 Bonus Requirements:
+
 1. Unit tests
 2. E2E automated tests using Cypress/Protractor/WebDriver/Selenium
 
 ## 3rd-party dependencies
 
 We do not discourage the use of 3rd-party dependencies, although if you decide to add any dependencies please provide a written reasoning for:
+
 1. Why you needed this package
 2. Why you chose this specific package
 

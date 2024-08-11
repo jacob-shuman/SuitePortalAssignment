@@ -29,7 +29,7 @@ sqlite
 - `postcss`
 - `autoprefixer`
 - `sveltekit-superforms`
-- `superstruct`
+- `valibot`
 
 # Production Server
 
