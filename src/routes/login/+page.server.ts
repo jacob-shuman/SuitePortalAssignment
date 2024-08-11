@@ -35,6 +35,7 @@ export const actions: Actions = {
 			});
 		}
 
+		// Retrieve user from db
 		const [existingUser] = await db
 			.select({
 				id: users.id,
@@ -56,10 +57,11 @@ export const actions: Actions = {
 			return setError(loginForm, 'password', 'Incorrect password');
 		}
 
-		// Add session cookie
+		// Create session
 		const session = await lucia.createSession(existingUser.id, {});
 		const sessionCookie = lucia.createSessionCookie(session.id);
 
+		// Add session cookie
 		cookies.set(sessionCookie.name, sessionCookie.value, {
 			path: '.',
 			...sessionCookie.attributes

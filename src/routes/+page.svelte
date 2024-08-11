@@ -67,7 +67,7 @@
 			label="Summary"
 			name="summary"
 			bind:value={$form.summary}
-			placeholder="I have an issue with my air conditioning..."
+			placeholder="I have an issue with..."
 			error={$errors.summary?.[0]}
 		/>
 

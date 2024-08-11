@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { IconAlertTriangleFilled, IconCheck } from '@tabler/icons-svelte';
+	import { IconAlertTriangleFilled, IconCheck, IconChevronDown } from '@tabler/icons-svelte';
 	import { Select } from 'bits-ui';
 	import tw from 'clsx';
 	import type { HTMLInputAttributes } from 'svelte/elements';
@@ -19,7 +19,7 @@
 	{#if label || description}
 		<div class="flex flex-col gap-y-1">
 			{#if label}
-				<p class={tw('font-bold', disabled && 'text-grey-light-100')}>
+				<p class="font-bold">
 					{label}
 					{#if required}
 						<span>*</span>
@@ -28,7 +28,7 @@
 			{/if}
 
 			{#if description}
-				<p class={tw('text-sm', disabled && 'text-grey-light-100')}>
+				<p class="text-sm">
 					{description}
 				</p>
 			{/if}
@@ -46,17 +46,16 @@
 	>
 		<Select.Trigger
 			class={tw(
-				'flex w-full items-center gap-x-2',
+				'flex w-full items-center justify-between gap-x-2',
 				'text-base font-medium text-black',
 				'transition duration-100 ease-out',
 				'rounded border border-gray-200 bg-white p-3',
-				'hover:enabled:text-grey-100 hover:enabled:bg-white-200',
 				'border-2 focus:outline-none focus:enabled:border-primary',
-				'disabled:text-grey-100 disabled:cursor-not-allowed'
+				'disabled:cursor-not-allowed'
 			)}
 		>
-			<!-- TODO: add chevron icon -->
 			<Select.Value class="flex-1 text-start" {placeholder} />
+			<IconChevronDown />
 		</Select.Trigger>
 
 		<Select.Content class="mt-4 flex flex-col gap-y-0.5 rounded-lg border bg-white p-2 shadow">

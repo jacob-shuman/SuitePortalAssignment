@@ -7,13 +7,6 @@ export enum ServiceType {
 	Plumbing = 'plumbing'
 }
 
-// export const ALL_SERVICE_TYPES = [
-// 	ServiceType.Electrical,
-// 	ServiceType.General,
-// 	ServiceType.PestControl,
-// 	ServiceType.Plumbing
-// ];
-
 export interface MaintenanceRequest {
 	// Name of the requester
 	name: string;
