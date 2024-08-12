@@ -1,6 +1,13 @@
 import { expect, test } from '@playwright/test';
 
-test('home page has expected h1', async ({ page }) => {
-	await page.goto('/');
-	await expect(page.locator('h1')).toBeVisible();
+test('login successfully', async ({ page }) => {
+	await page.goto('/login');
+	await expect(page.locator('button[type="submit"]')).toBeVisible();
+
+	await page.locator('input[name="email"]').fill('jacob.shuman7@gmail.com');
+	await page.locator('input[name="password"]').fill('testing');
+	await page.locator('button[type="submit"]').click();
+
+	await expect(page).toHaveURL(/.*\/admin$/);
+	await page.screenshot();
 });
