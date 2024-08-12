@@ -10,7 +10,7 @@
 </script>
 
 <nav class="flex justify-between border-b-2 border-primary/20 px-4 py-2">
-	<img src="/suite-spot.svg" class="w-36" />
+	<img src="/suite-spot.svg" class="w-36" alt="SuiteSpot logo" />
 
 	<ul class="flex items-center">
 		<li>
